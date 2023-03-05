@@ -1,6 +1,6 @@
 spring:
   application:
-    name: orderservice
+    name: order_service
   profiles:
     active: dev # 环境
   cloud:
@@ -8,3 +8,4 @@ spring:
       server-addr: localhost:80 # nacos地址
       config:
         file-extension: yaml #文件后缀名
+
