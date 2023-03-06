@@ -20,6 +20,7 @@ mybatis:
 logging:
   level:
     cn.itcast: debug
+    com.alibaba.nacos.client.naming: error
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
 #eureka:

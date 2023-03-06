@@ -23,8 +23,10 @@ mybatis:
 logging:
   level:
     cn.itcast: debug
+    com.alibaba.nacos.client.naming: error
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
+
 #eureka:
 #  client:
 #    service-url: #eureka的地址信息
@@ -40,3 +42,8 @@ ribbon:
     enabled: true # 开启饥饿加载
     clients:  #指定饥饿加载的服务名称
       - userservice
+#feign:
+#  client:
+#    config:
+#      default:
+#        logger-level: FULL
