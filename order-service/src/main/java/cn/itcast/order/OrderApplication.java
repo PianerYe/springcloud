@@ -1,8 +1,6 @@
 package cn.itcast.order;
 
-import cn.itcast.order.config.DefaultFeignConfiguration;
-import com.netflix.loadbalancer.IRule;
-import com.netflix.loadbalancer.RandomRule;
+import cn.itcast.feign.config.DefaultFeignConfiguration;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,10 +8,11 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
+import cn.itcast.feign.clients.UserClient;
 
 @MapperScan("cn.itcast.order.mapper")
 @SpringBootApplication
-@EnableFeignClients(defaultConfiguration = DefaultFeignConfiguration.class)
+@EnableFeignClients(clients = UserClient.class,defaultConfiguration = DefaultFeignConfiguration.class)
 public class OrderApplication {
 
     public static void main(String[] args) {
