@@ -19,3 +19,4 @@ spring:
           uri: lb://orderservice
           predicates:
             - Path=/order/**
+            - Before=2031-01-20T17:42:47.789-07:00[America/Denver]
