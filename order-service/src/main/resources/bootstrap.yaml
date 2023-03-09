@@ -1,6 +1,6 @@
 spring:
   application:
-    name: order_service
+    name: orderservice
   profiles:
     active: dev # 环境
   cloud:
