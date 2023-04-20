@@ -12,4 +12,5 @@ spring:
     sentinel:
       transport:
         dashboard: localhost:8080 #sentinel控制台地址
+      web-context-unify: false  #关闭sentinel整合
 
