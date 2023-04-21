@@ -7,7 +7,10 @@ import cn.itcast.order.mapper.OrderMapper;
 import cn.itcast.order.pojo.Order;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
+
 
 @Service
 public class OrderService {
@@ -15,6 +18,7 @@ public class OrderService {
     @Autowired
     private OrderMapper orderMapper;
     @Autowired
+//    @Lazy
     private UserClient userClient;
 
     public Order queryOrderById(Long orderId) {
