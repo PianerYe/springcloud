@@ -25,6 +25,7 @@ spring:
             - Before=2031-01-20T17:42:47.789-07:00[America/Denver]
       default-filters:
         - AddRequestHeader=Truth,itcast is freaking aowsome ! # 添加请求头
+        - AddRequestHeader=origin,gateway # 添加名为origin的请求头，值为gateway
       globalcors: # 全局的跨域处理
         add-to-simple-url-handler-mapping: true # 解决options请求被拦截问题
         corsConfigurations:
