@@ -13,4 +13,17 @@ spring:
       transport:
         dashboard: localhost:8080 #sentinel控制台地址
       web-context-unify: false  #关闭sentinel整合
+      datasource:
+        flow:
+          nacos:
+            serverAddr: localhost:80
+            dataId: orderservice-flow-rules
+            groupId: SENTINEL_GROUP
+            ruleType: flow
+        degrade:
+          nacos:
+            serverAddr: localhost:80
+            dataId: orderservice-degrade-rules
+            groupId: SENTINEL_GROUP
+            ruleType: degrade
 
